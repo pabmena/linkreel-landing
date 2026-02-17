@@ -97,3 +97,41 @@ input:focus,select:focus,textarea:focus{border-color:rgba(167,139,250,.6);box-sh
   .btn{padding:11px 14px}
   .proof{padding:12px}
 }
+/* Hero bullets: más aire y lectura en mobile */
+.hero__bullets--cards{
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+}
+
+.hero__bullets--cards li{
+  margin: 0;
+}
+
+.pill{
+  display: inline-block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  line-height: 1.25;
+  font-size: 0.95rem;
+}
+
+.pill strong{
+  font-weight: 700;
+}
+
+@media (max-width: 720px){
+  .hero__bullets--cards{
+    grid-template-columns: 1fr;
+  }
+  .pill{
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}
