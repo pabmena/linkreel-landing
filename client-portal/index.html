@@ -4,223 +4,224 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LinkReel | Portal del Cliente (MVP)</title>
+
+  <!-- Hereda el look & feel de la landing -->
+  <link rel="stylesheet" href="../styles.css" />
+  <!-- Estilos SOLO para layout/tablas del portal -->
   <link rel="stylesheet" href="./portal.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo">LR</div>
-        <div class="brand__text">
-          <div class="brand__name">LinkReel</div>
-          <div class="brand__sub">Portal del Cliente · MVP (sin backend)</div>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="LinkReel">
+        <span class="brand__mark">LR</span>
+        <span class="brand__text">
+          <span class="brand__name">LinkReel</span>
+          <span class="brand__sub">Portal del Cliente · MVP (sin backend)</span>
+        </span>
+      </a>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="../index.html">Volver a Landing</a>
+        <button class="btn btn--primary" id="btnCopyPrivateLink" type="button">Copiar link privado</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container portal">
+    <aside class="portal__side">
+      <div class="card portal__card">
+        <h3 class="card__title">Acceso</h3>
+
+        <label class="label" for="clientSelect">Cliente</label>
+        <select id="clientSelect" class="input"></select>
+
+        <label class="label" for="clientKey">Clave (MVP)</label>
+        <input id="clientKey" class="input" placeholder="Ej: demo123" />
+
+        <p class="hint">
+          Este MVP usa <code>?c=cliente&amp;k=clave</code> (no es seguridad real).
+          Para go-to-market está OK.
+        </p>
+
+        <div class="row">
+          <button class="btn btn--primary" id="btnEnter" type="button">Entrar</button>
+          <button class="btn btn--ghost" id="btnDemo" type="button">Cargar Demo</button>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="mini">
+          <div class="mini__title">Atajos</div>
+          <a class="link" href="./index.html?c=demo&k=demo123">Abrir Demo (link)</a>
         </div>
       </div>
 
-      <div class="topbar__actions">
-        <a class="btn btn--ghost" id="btnBackToLanding" href="../index.html">Volver a Landing</a>
-        <button class="btn" id="btnCopyPrivateLink" type="button">Copiar link privado</button>
+      <div class="card portal__card">
+        <h3 class="card__title">Navegación</h3>
+        <nav class="nav">
+          <a class="nav__item" href="#resumen">Resumen semanal</a>
+          <a class="nav__item" href="#analytics">Analytics oficiales</a>
+          <a class="nav__item" href="#calendario">Calendario editorial</a>
+          <a class="nav__item" href="#leads">Leads</a>
+          <a class="nav__item" href="#entregables">Entregables</a>
+          <a class="nav__item" href="#acuerdos">Acuerdos</a>
+        </nav>
       </div>
-    </header>
+    </aside>
 
-    <main class="grid">
-      <aside class="side">
-        <div class="card">
-          <div class="card__title">Acceso</div>
-
-          <label class="label" for="clientSelect">Cliente</label>
-          <select id="clientSelect" class="input"></select>
-
-          <label class="label" for="clientKey">Clave (MVP)</label>
-          <input id="clientKey" class="input" placeholder="Ej: demo123" />
-
-          <div class="hint">
-            Este MVP usa <code>?c=cliente&amp;k=clave</code> (no es seguridad real). Para go-to-market está OK.
+    <section class="portal__content">
+      <section class="card portal__card">
+        <div class="portalHero">
+          <div>
+            <div class="pill" id="clientPill">Cliente: —</div>
+            <h1 class="h1" id="clientTitle">Portal del Cliente</h1>
+            <p class="muted" id="clientSubtitle">
+              KPIs semanales + links oficiales + calendario + trazabilidad mínima para demostrar ROI.
+            </p>
           </div>
 
-          <div class="row">
-            <button class="btn btn--primary" id="btnEnter" type="button">Entrar</button>
-            <button class="btn btn--ghost" id="btnDemo" type="button">Cargar Demo</button>
-          </div>
-
-          <hr class="sep" />
-
-          <div class="mini">
-            <div class="mini__title">Atajos</div>
-            <a class="link" href="./index.html?c=demo&k=demo123">Abrir Demo (link)</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__title">Navegación</div>
-          <nav class="nav">
-            <a class="nav__item" href="#resumen">Resumen semanal</a>
-            <a class="nav__item" href="#analytics">Analytics oficiales</a>
-            <a class="nav__item" href="#calendario">Calendario editorial</a>
-            <a class="nav__item" href="#leads">Leads</a>
-            <a class="nav__item" href="#entregables">Entregables</a>
-            <a class="nav__item" href="#acuerdos">Acuerdos</a>
-          </nav>
-        </div>
-      </aside>
-
-      <section class="content">
-        <div class="card" id="hero">
-          <div class="hero">
-            <div>
-              <div class="pill" id="clientPill">Cliente: —</div>
-              <h1 class="h1" id="clientTitle">Portal del Cliente</h1>
-              <p class="muted" id="clientSubtitle">
-                KPIs semanales + links oficiales + calendario + trazabilidad mínima para demostrar ROI.
-              </p>
+          <div class="portalHero__meta">
+            <div class="meta">
+              <div class="meta__k">Semana</div>
+              <div class="meta__v" id="weekLabel">—</div>
             </div>
-            <div class="hero__meta">
-              <div class="meta">
-                <div class="meta__k">Semana</div>
-                <div class="meta__v" id="weekLabel">—</div>
-              </div>
-              <div class="meta">
-                <div class="meta__k">Última actualización</div>
-                <div class="meta__v" id="lastUpdated">—</div>
-              </div>
+            <div class="meta">
+              <div class="meta__k">Última actualización</div>
+              <div class="meta__v" id="lastUpdated">—</div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- RESUMEN -->
-        <div class="card" id="resumen">
-          <div class="card__title">Resumen semanal</div>
+      <section class="card portal__card" id="resumen">
+        <h2 class="sectionTitle">Resumen semanal</h2>
 
-          <div class="kpis" id="kpiGrid"></div>
+        <div class="kpis" id="kpiGrid"></div>
 
-          <div class="two">
-            <div class="box">
-              <div class="box__title">Qué funcionó</div>
-              <ul class="list" id="whatWorked"></ul>
-            </div>
-            <div class="box">
-              <div class="box__title">Qué se cambia</div>
-              <ul class="list" id="whatChanges"></ul>
-            </div>
-          </div>
-
+        <div class="two">
           <div class="box">
-            <div class="box__title">Top posts (semana)</div>
-            <div class="tableWrap">
-              <table class="table" id="topPostsTable">
-                <thead>
-                  <tr>
-                    <th>Red</th>
-                    <th>Cuenta</th>
-                    <th>Hook</th>
-                    <th>Views</th>
-                    <th>ER</th>
-                    <th>Link</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
+            <div class="box__title">Qué funcionó</div>
+            <ul class="list" id="whatWorked"></ul>
+          </div>
+          <div class="box">
+            <div class="box__title">Qué se cambia</div>
+            <ul class="list" id="whatChanges"></ul>
           </div>
         </div>
 
-        <!-- ANALYTICS OFICIALES -->
-        <div class="card" id="analytics">
-          <div class="card__title">Analytics oficiales (por cuenta)</div>
-          <p class="muted">Accesos directos a los paneles de cada red (sin integraciones).</p>
-
+        <div class="box">
+          <div class="box__title">Top posts (semana)</div>
           <div class="tableWrap">
-            <table class="table" id="analyticsTable">
+            <table class="table" id="topPostsTable">
               <thead>
                 <tr>
                   <th>Red</th>
                   <th>Cuenta</th>
-                  <th>Link oficial</th>
-                  <th>Notas</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- CALENDARIO -->
-        <div class="card" id="calendario">
-          <div class="card__title">Calendario editorial</div>
-          <p class="muted">Qué se publicó / dónde / y link al post + shortlink.</p>
-
-          <div class="tableWrap">
-            <table class="table" id="calendarTable">
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Red</th>
-                  <th>Tema</th>
                   <th>Hook</th>
-                  <th>Estado</th>
-                  <th>Post</th>
-                  <th>Shortlink</th>
+                  <th>Views</th>
+                  <th>ER</th>
+                  <th>Link</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
           </div>
         </div>
-
-        <!-- LEADS -->
-        <div class="card" id="leads">
-          <div class="card__title">Leads (log)</div>
-          <p class="muted">Registro mínimo para atribución y ROI: fuente/campaña/contenido/estado.</p>
-
-          <div class="tableWrap">
-            <table class="table" id="leadsTable">
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Fuente</th>
-                  <th>Campaña</th>
-                  <th>Contenido</th>
-                  <th>Canal</th>
-                  <th>Estado</th>
-                  <th>Nota</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- ENTREGABLES -->
-        <div class="card" id="entregables">
-          <div class="card__title">Entregables</div>
-          <div class="deliverables" id="deliverablesList"></div>
-        </div>
-
-        <!-- ACUERDOS -->
-        <div class="card" id="acuerdos">
-          <div class="card__title">Acuerdos (mínimo legal/operativo)</div>
-          <div class="two">
-            <div class="box">
-              <div class="box__title">Alcance + SLA</div>
-              <ul class="list" id="slaList"></ul>
-            </div>
-            <div class="box">
-              <div class="box__title">Cumplimiento (ToS)</div>
-              <ul class="list" id="tosList"></ul>
-            </div>
-          </div>
-
-          <div class="hint">
-            Para venta: “sin promesas de resultados”, permisos de uso de marca/contenido, ownership de cuentas, y política explícita de no violar ToS.
-          </div>
-        </div>
-
-        <footer class="foot">
-          <div class="muted">© <span id="year"></span> LinkReel · Portal MVP</div>
-        </footer>
       </section>
-    </main>
-  </div>
+
+      <section class="card portal__card" id="analytics">
+        <h2 class="sectionTitle">Analytics oficiales (por cuenta)</h2>
+        <p class="muted">Accesos directos a los paneles de cada red (sin integraciones).</p>
+
+        <div class="tableWrap">
+          <table class="table" id="analyticsTable">
+            <thead>
+              <tr>
+                <th>Red</th>
+                <th>Cuenta</th>
+                <th>Link oficial</th>
+                <th>Notas</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card portal__card" id="calendario">
+        <h2 class="sectionTitle">Calendario editorial</h2>
+        <p class="muted">Qué se publicó / dónde / y link al post + shortlink.</p>
+
+        <div class="tableWrap">
+          <table class="table" id="calendarTable">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Red</th>
+                <th>Tema</th>
+                <th>Hook</th>
+                <th>Estado</th>
+                <th>Post</th>
+                <th>Shortlink</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card portal__card" id="leads">
+        <h2 class="sectionTitle">Leads (log)</h2>
+        <p class="muted">Registro mínimo para atribución y ROI: fuente/campaña/contenido/estado.</p>
+
+        <div class="tableWrap">
+          <table class="table" id="leadsTable">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Fuente</th>
+                <th>Campaña</th>
+                <th>Contenido</th>
+                <th>Canal</th>
+                <th>Estado</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card portal__card" id="entregables">
+        <h2 class="sectionTitle">Entregables</h2>
+        <div class="deliverables" id="deliverablesList"></div>
+      </section>
+
+      <section class="card portal__card" id="acuerdos">
+        <h2 class="sectionTitle">Acuerdos (mínimo legal/operativo)</h2>
+
+        <div class="two">
+          <div class="box">
+            <div class="box__title">Alcance + SLA</div>
+            <ul class="list" id="slaList"></ul>
+          </div>
+          <div class="box">
+            <div class="box__title">Cumplimiento (ToS)</div>
+            <ul class="list" id="tosList"></ul>
+          </div>
+        </div>
+
+        <p class="hint">
+          Para venta: “sin promesas de resultados”, permisos de uso de marca/contenido, ownership de cuentas, y política explícita de no violar ToS.
+        </p>
+      </section>
+
+      <footer class="portalFooter">
+        <p class="muted">© <span id="year"></span> LinkReel · Portal MVP</p>
+      </footer>
+    </section>
+  </main>
 
   <script src="./portal-data.js"></script>
   <script src="./portal.js"></script>

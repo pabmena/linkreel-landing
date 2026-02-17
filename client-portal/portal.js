@@ -25,32 +25,15 @@
     year: $("year")
   };
 
-  const state = {
-    client: null
-  };
+  const state = { client: null };
 
   function parseQuery() {
     const p = new URLSearchParams(window.location.search);
-    return {
-      c: (p.get("c") || "").trim(),
-      k: (p.get("k") || "").trim()
-    };
+    return { c: (p.get("c") || "").trim(), k: (p.get("k") || "").trim() };
   }
 
   function setYear() {
-    els.year.textContent = String(new Date().getFullYear());
-  }
-
-  function setClientSelect() {
-    const clients = window.PORTAL_DATA?.clients || [];
-    els.clientSelect.innerHTML = clients
-      .map((c) => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)}</option>`)
-      .join("");
-  }
-
-  function findClient(clientId) {
-    const clients = window.PORTAL_DATA?.clients || [];
-    return clients.find((c) => c.id === clientId) || null;
+    if (els.year) els.year.textContent = String(new Date().getFullYear());
   }
 
   function escapeHtml(s) {
@@ -65,6 +48,19 @@
   function fmtNum(n) {
     if (typeof n !== "number") return escapeHtml(String(n));
     return n.toLocaleString("es-AR");
+  }
+
+  function setClientSelect() {
+    const clients = window.PORTAL_DATA?.clients || [];
+    if (!els.clientSelect) return;
+    els.clientSelect.innerHTML = clients
+      .map((c) => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)}</option>`)
+      .join("");
+  }
+
+  function findClient(clientId) {
+    const clients = window.PORTAL_DATA?.clients || [];
+    return clients.find((c) => c.id === clientId) || null;
   }
 
   function badge(status) {
@@ -90,7 +86,6 @@
     els.weekLabel.textContent = c.weekLabel || "—";
     els.lastUpdated.textContent = c.lastUpdated || "—";
 
-    // KPIs
     els.kpiGrid.innerHTML = (c.kpis || [])
       .map((k) => `
         <div class="kpi">
@@ -101,18 +96,15 @@
       `)
       .join("");
 
-    // Bullets
-    els.whatWorked.innerHTML = (c.whatWorked || [])
-      .map((t) => `<li>${escapeHtml(t)}</li>`)
-      .join("");
-    els.whatChanges.innerHTML = (c.whatChanges || [])
-      .map((t) => `<li>${escapeHtml(t)}</li>`)
-      .join("");
+    els.whatWorked.innerHTML = (c.whatWorked || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
+    els.whatChanges.innerHTML = (c.whatChanges || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
 
-    // Top posts
     clearTables();
+
     (c.topPosts || []).forEach((p) => {
-      const link = p.url ? `<a class="link" href="${escapeHtml(p.url)}" target="_blank" rel="noreferrer">Ver</a>` : "—";
+      const link = p.url
+        ? `<a class="link" href="${escapeHtml(p.url)}" target="_blank" rel="noreferrer">Ver</a>`
+        : "—";
       els.topPostsTable.insertAdjacentHTML(
         "beforeend",
         `<tr>
@@ -126,7 +118,6 @@
       );
     });
 
-    // Analytics
     (c.analytics || []).forEach((a) => {
       els.analyticsTable.insertAdjacentHTML(
         "beforeend",
@@ -139,7 +130,6 @@
       );
     });
 
-    // Calendar
     (c.calendar || []).forEach((r) => {
       const post = r.postUrl
         ? `<a class="link" href="${escapeHtml(r.postUrl)}" target="_blank" rel="noreferrer">Post</a>`
@@ -161,7 +151,6 @@
       );
     });
 
-    // Leads
     (c.leads || []).forEach((l) => {
       els.leadsTable.insertAdjacentHTML(
         "beforeend",
@@ -177,7 +166,6 @@
       );
     });
 
-    // Deliverables
     els.deliverablesList.innerHTML = (c.deliverables || [])
       .map((d) => `
         <div class="tile">
@@ -188,7 +176,6 @@
       `)
       .join("");
 
-    // SLA / ToS
     els.slaList.innerHTML = (c.sla || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
     els.tosList.innerHTML = (c.tos || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
   }
@@ -196,32 +183,22 @@
   function tryAutoLoginFromUrl() {
     const q = parseQuery();
     if (!q.c) return;
-
     const client = findClient(q.c);
     if (!client) return;
 
-    // Pre-fill fields
     els.clientSelect.value = client.id;
     els.clientKey.value = q.k || "";
 
-    // Validate key (MVP)
-    if (q.k && q.k === client.key) {
-      renderClient(client);
-    }
+    if (q.k && q.k === client.key) renderClient(client);
   }
 
   function enter() {
     const clientId = els.clientSelect.value;
     const key = (els.clientKey.value || "").trim();
     const client = findClient(clientId);
-    if (!client) {
-      alert("Cliente no encontrado.");
-      return;
-    }
-    if (key !== client.key) {
-      alert("Clave incorrecta (MVP).");
-      return;
-    }
+
+    if (!client) return alert("Cliente no encontrado.");
+    if (key !== client.key) return alert("Clave incorrecta (MVP).");
 
     const next = `${window.location.pathname}?c=${encodeURIComponent(client.id)}&k=${encodeURIComponent(key)}`;
     window.history.replaceState({}, "", next);
@@ -234,6 +211,7 @@
     if (!demo) return;
     els.clientSelect.value = "demo";
     els.clientKey.value = demo.key;
+
     const next = `${window.location.pathname}?c=demo&k=${encodeURIComponent(demo.key)}`;
     window.history.replaceState({}, "", next);
     renderClient(demo);
@@ -242,11 +220,10 @@
 
   async function copyPrivateLink() {
     const c = state.client;
-    if (!c) {
-      alert("Primero ingresá a un cliente (o cargá el demo).");
-      return;
-    }
+    if (!c) return alert("Primero ingresá a un cliente (o cargá el demo).");
+
     const url = `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(c.id)}&k=${encodeURIComponent(c.key)}`;
+
     try {
       await navigator.clipboard.writeText(url);
       alert("Link copiado.");
@@ -261,14 +238,8 @@
     els.btnCopyPrivateLink.addEventListener("click", copyPrivateLink);
   }
 
-  // init
   setYear();
   setClientSelect();
   bind();
   tryAutoLoginFromUrl();
-
-  // Fallback: si no hay cliente cargado, mostrar demo como “modo vitrina”
-  if (!state.client) {
-    // no autoload para no “forzar”; dejalo suave con el botón demo
-  }
 })();
