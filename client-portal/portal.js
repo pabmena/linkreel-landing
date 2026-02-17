@@ -239,10 +239,22 @@
     els.btnEnter.addEventListener("click", enter);
     els.btnDemo.addEventListener("click", loadDemo);
     els.btnCopyPrivateLink.addEventListener("click", copyPrivateLink);
+
+    // Marcar activo en el menú al click
+    document.querySelectorAll(".nav__item").forEach((a) => {
+      a.addEventListener("click", () => {
+        document.querySelectorAll(".nav__item").forEach(x => x.classList.remove("is-active"));
+        a.classList.add("is-active");
+      });
+    });
   }
 
   setYear();
   setClientSelect();
   bind();
   tryAutoLoginFromUrl();
+
+  // Activo por defecto
+  const firstNav = document.querySelector('.nav__item[href="#resumen"]');
+  if (firstNav) firstNav.classList.add("is-active");
 })();

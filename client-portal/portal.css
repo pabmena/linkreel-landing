@@ -115,17 +115,56 @@
 .link{ color: color-mix(in srgb, var(--primary) 75%, white); text-decoration: none; font-weight: 800; }
 .link:hover{ text-decoration: underline; }
 
-.nav{ display:flex; flex-direction:column; gap: 8px; }
+/* NAV más clara (sidebar) */
+.nav{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
 .nav__item{
-  display:block;
-  padding: 10px 12px;
-  border-radius: 12px;
+  width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
   border: 1px solid color-mix(in srgb, var(--muted) 18%, transparent);
   background: color-mix(in srgb, var(--bg) 86%, white);
-  text-decoration: none;
+
+  text-decoration:none;
   color: var(--text);
+  font-weight: 900;
+
+  transition: transform .12s ease, filter .12s ease, border-color .12s ease, background .12s ease;
 }
-.nav__item:hover{ filter: brightness(1.05); }
+
+/* Hover más evidente */
+.nav__item:hover{
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+/* Activo: resalta dónde estás */
+.nav__item.is-active{
+  background: color-mix(in srgb, var(--primary) 14%, var(--bg));
+  border-color: color-mix(in srgb, var(--primary) 38%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 14%, transparent);
+}
+
+/* “Indicador” a la derecha */
+.nav__item::after{
+  content: "→";
+  opacity: .55;
+  font-weight: 900;
+}
+
+.nav__item.is-active::after{
+  opacity: 1;
+}
 
 /* Hero */
 .portalHero{
