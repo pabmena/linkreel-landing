@@ -17,8 +17,8 @@ window.PORTAL_DATA = {
         { k: "Clicks al link", v: "1,042", s: "CTR aprox: 0.81%" },
         { k: "Leads", v: "37", s: "Click→Lead: 3.55%" },
         { k: "Turnos/Calls", v: "8", s: "Calendly/WhatsApp" },
-        { k: "CPA estimado", v: "—", s: "MVP: completar luego" },
-        { k: "ROI (proxy)", v: "↑", s: "Se valida con ventas reales" }
+        { k: "CPA estimado", v: "—", s: "A confirmar según datos de inversión" },
+        { k: "ROI (proxy)", v: "↑", s: "Se valida con resultados reales" }
       ],
       whatWorked: [
         "Hooks con dolor explícito + promesa concreta en 2–3s.",

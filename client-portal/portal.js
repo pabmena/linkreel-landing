@@ -201,7 +201,7 @@
     const client = findClient(clientId);
 
     if (!client) return alert("Cliente no encontrado.");
-    if (key !== client.key) return alert("Clave incorrecta (MVP).");
+    if (key !== client.key) return alert("Clave incorrecta.");
 
     const next = `${window.location.pathname}?c=${encodeURIComponent(client.id)}&k=${encodeURIComponent(key)}`;
     window.history.replaceState({}, "", next);
@@ -223,7 +223,7 @@
 
   async function copyPrivateLink() {
     const c = state.client;
-    if (!c) return alert("Primero ingresá a un cliente (o cargá el demo).");
+    if (!c) return alert("Primero ingresá (o cargá el demo).");
 
     const url = `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(c.id)}&k=${encodeURIComponent(c.key)}`;
 
