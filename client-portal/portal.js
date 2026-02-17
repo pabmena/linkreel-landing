@@ -171,7 +171,10 @@
         <div class="tile">
           <div class="tile__t">${escapeHtml(d.title)}</div>
           <div class="tile__d">${escapeHtml(d.desc || "")}</div>
-          <a class="tile__a" href="${escapeHtml(d.url)}" target="_blank" rel="noreferrer">Abrir</a>
+          ${state.client?.id === "demo"
+  ? `<span class="tile__a tile__a--disabled" title="No disponible en demo">Abrir</span>`
+  : `<a class="tile__a" href="${escapeHtml(d.url)}" target="_blank" rel="noreferrer">Abrir</a>`
+}
         </div>
       `)
       .join("");

@@ -268,3 +268,10 @@
 .portalFooter{
   padding: 4px 2px 2px;
 }
+
+.tile__a--disabled{
+  opacity: .55;
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+}
