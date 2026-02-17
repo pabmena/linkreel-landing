@@ -71,3 +71,29 @@ input:focus,select:focus,textarea:focus{border-color:rgba(167,139,250,.6);box-sh
 .footer__links{display:flex;gap:14px}.footer__links a{color:#cbd5e1;padding:8px 10px;border-radius:12px}.footer__links a:hover{background:rgba(255,255,255,.06)}
 @media (max-width:980px){.nav{display:none}.header__cta{display:none}.hamburger{display:block}.hero__grid{grid-template-columns:1fr}.hero__proof{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr}.report__grid{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr 1fr}.addons__grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.pricing{grid-template-columns:1fr}}
+
+
+.form-status{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);color:#e5e7eb;font-size:.92rem}
+.form-status.is-error{border-color:rgba(239,68,68,.45);background:rgba(239,68,68,.10)}
+.form-status[hidden]{display:none}
+
+@media (max-width:520px){
+  body{background:radial-gradient(800px 480px at 10% 10%,rgba(124,58,237,.18),transparent 60%),radial-gradient(700px 520px at 95% 20%,rgba(14,165,233,.12),transparent 55%),linear-gradient(180deg,#070b14 0%,#0b1220 55%,#050814 100%)}
+  .container{padding:0 16px}
+  .hero{padding:86px 0 34px}
+  .badge{font-size:.82rem;padding:7px 10px}
+  .hero h1{font-size:clamp(1.75rem,7vw,2.35rem);line-height:1.08}
+  .lead{font-size:1rem}
+  .hero__actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+  .card, .price, .addon, .contact__card, .sidebox{box-shadow:none}
+  .header{backdrop-filter:none}
+  .topbar{backdrop-filter:none}
+  .price__money{font-size:2.05rem}
+}
+@media (max-width:420px){
+  .nav__brand{gap:10px}
+  .nav__brand span{font-size:1rem}
+  .btn{padding:11px 14px}
+  .proof{padding:12px}
+}

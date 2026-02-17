@@ -1,462 +1,362 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es-AR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LinkReel — Presencia multi‑red en sistema</title>
-  <meta name="description" content="Convertimos tu grabación semanal en clips listos, los distribuimos con variaciones y te damos métricas accionables para optimizar semana a semana." />
-  <meta name="theme-color" content="#111827" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>LinkReel — Presencia multi‑red en sistema</title>
+<meta content="Convertimos tu grabación semanal en clips listos, los distribuimos con variaciones y te damos métricas accionables para optimizar semana a semana." name="description"/>
+<meta content="#111827" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="LinkReel">
-        <span class="brand__mark" aria-hidden="true">LR</span>
-        <span class="brand__text">LinkReel</span>
-      </a>
-
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#incluye">Qué incluye</a>
-        <a href="#planes">Planes</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="header__cta">
-        <a class="btn btn--ghost" href="#planes">Ver planes</a>
-        <a class="btn btn--primary" id="ctaHeader" href="#contacto">Agendar 15 min</a>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile-nav" id="mobileNav" hidden>
-      <div class="container mobile-nav__inner">
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#incluye">Qué incluye</a>
-        <a href="#planes">Planes</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn btn--primary mobile-nav__btn" href="#contacto">Agendar 15 min</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <div class="badge">Camino 2 · multi‑red · medición semanal</div>
-          <h1>Publicá todos los días sin vivir pegado al celular.</h1>
-          <p class="lead">
+<header class="header">
+<div class="container header__inner">
+<a aria-label="LinkReel" class="brand" href="#top">
+<span aria-hidden="true" class="brand__mark">LR</span>
+<span class="brand__text">LinkReel</span>
+</a>
+<nav aria-label="Navegación principal" class="nav">
+<a href="#como-funciona">Cómo funciona</a>
+<a href="#incluye">Qué incluye</a>
+<a href="#planes">Planes</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="header__cta">
+<a class="btn btn--ghost" href="#planes">Ver planes</a>
+<a class="btn btn--primary" href="#contacto" id="ctaHeader">Agendar 15 min</a>
+</div>
+<button aria-expanded="false" aria-label="Abrir menú" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-nav" hidden="" id="mobileNav">
+<div class="container mobile-nav__inner">
+<a href="#como-funciona">Cómo funciona</a>
+<a href="#incluye">Qué incluye</a>
+<a href="#planes">Planes</a>
+<a href="#faq">FAQ</a>
+<a class="btn btn--primary mobile-nav__btn" href="#contacto">Agendar 15 min</a>
+</div>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container hero__grid">
+<div class="hero__copy">
+<div class="badge">Multi‑red, sin fricción (medición semanal)</div>
+<h1>Publicá todos los días sin vivir pegado al celular.</h1>
+<p class="lead">
             Grabás 40–60 minutos por semana. Nosotros lo transformamos en clips listos, los distribuimos con variaciones
             en tus redes y te damos métricas claras para optimizar semana a semana.
           </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#contacto">Agendar llamada</a>
-            <a class="btn btn--ghost" href="#demo">Ver ejemplo de reporte</a>
-          </div>
-
-          <div class="hero__proof">
-            <div class="proof">
-              <div class="proof__kpi">4</div>
-              <div class="proof__txt">Redes soportadas (TikTok/IG/Shorts/FB)</div>
-            </div>
-            <div class="proof">
-              <div class="proof__kpi">24h</div>
-              <div class="proof__txt">Ventana típica de revisión (opcional)</div>
-            </div>
-            <div class="proof">
-              <div class="proof__kpi">Semanal</div>
-              <div class="proof__txt">Reporte con acciones: duplicar / cortar / probar</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__card">
-          <div class="card">
-            <div class="card__top">
-              <div class="card__title">Lo que entregamos</div>
-              <div class="card__subtitle">por cuenta · por mes</div>
-            </div>
-
-            <ul class="checklist">
-              <li>Calendario editorial + cadencia</li>
-              <li>Edición “lite” + subtítulos (según plan)</li>
-              <li>Variaciones reales (hooks/duración)</li>
-              <li>QA antes de publicar + control de errores</li>
-              <li>Tracking (UTM + WhatsApp/DM) y reporte semanal</li>
-            </ul>
-
-            <div class="card__cta">
-              <a class="btn btn--primary btn--full" href="#planes">Ver planes y precios</a>
-              <p class="muted">Sin promesas de “viralidad”. Sí: proceso, volumen y optimización con métricas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="trust">
-      <div class="container trust__inner">
-        <p class="muted">Ideal para: consultores, abogados, médicos, coaches, inmobiliarias, gimnasios, estética, autos.</p>
-      </div>
-    </section>
-
-    <section class="section" id="como-funciona">
-      <div class="container">
-        <div class="section__head">
-          <h2>Cómo funciona</h2>
-          <p class="muted">Un sistema simple: de tu experiencia a presencia constante, sin caos.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step__num">01</div>
-            <h3>Grabás</h3>
-            <p>Una vez por semana respondés preguntas diseñadas para extraer tus ideas. Conversacional.</p>
-          </div>
-          <div class="step">
-            <div class="step__num">02</div>
-            <h3>Producimos</h3>
-            <p>Convertimos la sesión en clips: subtítulos, formato nativo, hooks y packaging.</p>
-          </div>
-          <div class="step">
-            <div class="step__num">03</div>
-            <h3>Distribuimos</h3>
-            <p>Publicación asistida (o programada donde aplique), con variaciones reales por red.</p>
-          </div>
-          <div class="step">
-            <div class="step__num">04</div>
-            <h3>Medimos y optimizamos</h3>
-            <p>Reporte semanal con métricas y acciones: qué duplicar, qué cortar, qué probar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="incluye">
-      <div class="container">
-        <div class="section__head">
-          <h2>Qué incluye</h2>
-          <p class="muted">Operación nativa + QA + variación + medición. Sin “hacks”.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="feature">
-            <h3>Edición & packaging</h3>
-            <p>Subtítulos, ritmo, safe‑area, títulos/copy por red. Edición “lite” pensada para volumen.</p>
-          </div>
-          <div class="feature">
-            <h3>QA pre‑post</h3>
-            <p>Checklist de calidad: formato, CTA, links, errores comunes y banderas de riesgo.</p>
-          </div>
-          <div class="feature">
-            <h3>Variaciones reales</h3>
-            <p>Hooks y duraciones alternativas para test A/B. No clones. Aprendizaje más rápido.</p>
-          </div>
-          <div class="feature">
-            <h3>Multi‑red</h3>
-            <p>TikTok / IG Reels / YouTube Shorts / Facebook Reels. Un asset base, empaque por red.</p>
-          </div>
-          <div class="feature">
-            <h3>Tracking de leads</h3>
-            <p>UTM + WhatsApp/DM con mensaje prellenado para atribución simple desde el día 1.</p>
-          </div>
-          <div class="feature">
-            <h3>Reporte accionable</h3>
-            <p>Top/bottom de la semana + recomendaciones concretas para la semana siguiente.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="demo">
-      <div class="container">
-        <div class="section__head">
-          <h2>Ejemplo de reporte semanal</h2>
-          <p class="muted">Formato “1 página” para decidir qué publicar mañana.</p>
-        </div>
-
-        <div class="report">
-          <div class="report__head">
-            <div>
-              <div class="report__title">Reporte semanal — Cuenta Demo — Semana 2026‑02‑16</div>
-              <div class="muted">Resumen, top/bottom y plan próximo. (Números ilustrativos.)</div>
-            </div>
-            <a class="btn btn--ghost" href="#contacto">Quiero uno así</a>
-          </div>
-
-          <div class="report__grid">
-            <div class="report__box">
-              <h3>Resumen</h3>
-              <ul class="mini">
-                <li>Posts: <strong>12</strong></li>
-                <li>Views totales: <strong>48.200</strong></li>
-                <li>ER promedio: <strong>6,1%</strong></li>
-                <li>Leads (WhatsApp/DM): <strong>18</strong></li>
-              </ul>
-            </div>
-
-            <div class="report__box">
-              <h3>Top 3</h3>
-              <ol class="mini">
-                <li><strong>Hook:</strong> “Si publicás 1 video/semana…” → duplicar</li>
-                <li><strong>Tema:</strong> “Checklist QA pre‑post” → serie</li>
-                <li><strong>Formato:</strong> “3 errores” (18–22s) → mantener</li>
-              </ol>
-            </div>
-
-            <div class="report__box">
-              <h3>Bottom 3</h3>
-              <ol class="mini">
-                <li>Intro lenta → recortar</li>
-                <li>CTA genérico → CTA específico</li>
-                <li>Versión 55s → versión 25s</li>
-              </ol>
-            </div>
-
-            <div class="report__box">
-              <h3>Plan próxima semana</h3>
-              <ul class="mini">
-                <li>Duplicar: “errores comunes” + “checklists”</li>
-                <li>Test: 2 hooks alternativos por tema</li>
-                <li>Cadencia: 4 posts/semana</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="planes">
-      <div class="container">
-        <div class="section__head">
-          <h2>Planes por cuenta</h2>
-          <p class="muted">Competitivos y claros. Multi‑red como add‑on.</p>
-        </div>
-
-        <div class="pricing">
-          <div class="price">
-            <div class="price__tag">Launch</div>
-            <div class="price__money"><span class="price__currency">USD</span>50<span class="price__period">/mes</span></div>
-            <p class="muted">Operación + QA + reporte (sin edición incluida).</p>
-            <ul class="checklist">
-              <li>Hasta 12 publicaciones/mes</li>
-              <li>1 red principal</li>
-              <li>Calendario + QA pre‑post</li>
-              <li>Reporte semanal básico</li>
-            </ul>
-            <div class="price__foot">
-              <div class="muted">Setup único: USD 49</div>
-              <a class="btn btn--primary btn--full" href="#contacto" data-plan="Launch">Empezar Launch</a>
-            </div>
-          </div>
-
-          <div class="price">
-            <div class="price__tag">Starter</div>
-            <div class="price__money"><span class="price__currency">USD</span>90<span class="price__period">/mes</span></div>
-            <p class="muted">Launch + edición “lite”.</p>
-            <ul class="checklist">
-              <li>Hasta 12 publicaciones/mes</li>
-              <li>1 red principal</li>
-              <li>4 piezas editadas/mes</li>
-              <li>Copy/títulos por pieza</li>
-            </ul>
-            <div class="price__foot">
-              <div class="muted">Setup único: USD 59</div>
-              <a class="btn btn--primary btn--full" href="#contacto" data-plan="Starter">Empezar Starter</a>
-            </div>
-          </div>
-
-          <div class="price price--featured">
-            <div class="price__badge">Recomendado</div>
-            <div class="price__tag">Growth</div>
-            <div class="price__money"><span class="price__currency">USD</span>150<span class="price__period">/mes</span></div>
-            <p class="muted">Optimización semanal con tests simples.</p>
-            <ul class="checklist">
-              <li>Hasta 16 publicaciones/mes</li>
-              <li>1 red principal</li>
-              <li>8 piezas editadas/mes</li>
-              <li>2 variantes/mes (hook/duración)</li>
-            </ul>
-            <div class="price__foot">
-              <div class="muted">Setup único: USD 79</div>
-              <a class="btn btn--primary btn--full" href="#contacto" data-plan="Growth">Empezar Growth</a>
-            </div>
-          </div>
-
-          <div class="price">
-            <div class="price__tag">Scale</div>
-            <div class="price__money"><span class="price__currency">USD</span>230<span class="price__period">/mes</span></div>
-            <p class="muted">Más output y roadmap mensual.</p>
-            <ul class="checklist">
-              <li>Hasta 24 publicaciones/mes</li>
-              <li>1 red principal</li>
-              <li>16 piezas editadas/mes</li>
-              <li>4 variantes/mes + 1 call mensual</li>
-            </ul>
-            <div class="price__foot">
-              <div class="muted">Setup único: USD 99</div>
-              <a class="btn btn--primary btn--full" href="#contacto" data-plan="Scale">Empezar Scale</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="addons">
-          <h3>Add‑ons</h3>
-          <div class="addons__grid">
-            <div class="addon">
-              <div class="addon__name">Multi‑red Repurpose</div>
-              <div class="addon__price">USD 20 / red / mes</div>
-              <p class="muted">Adaptar el mismo asset a otra red.</p>
-            </div>
-            <div class="addon">
-              <div class="addon__name">Publicación multi‑red</div>
-              <div class="addon__price">USD 30 / red / mes</div>
-              <p class="muted">Operación + QA + reporte por red adicional.</p>
-            </div>
-            <div class="addon">
-              <div class="addon__name">Piezas extra</div>
-              <div class="addon__price">USD 6 / pieza</div>
-              <p class="muted">Edición lite adicional.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section__head">
-          <h2>Preguntas frecuentes</h2>
-          <p class="muted">Proceso y métricas, no promesas mágicas.</p>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>¿Garantizan alcance o viralidad?</summary>
-            <p>No. Garantizamos proceso, volumen, calidad y optimización basada en métricas.</p>
-          </details>
-          <details>
-            <summary>¿Necesito estar frente a cámara?</summary>
-            <p>Recomendado para marca personal, pero no obligatorio: voz en off, pantalla, producto, tours, etc.</p>
-          </details>
-          <details>
-            <summary>¿Puedo aprobar antes de publicar?</summary>
-            <p>Sí. Definimos una ventana de revisión (por ejemplo 24h) para que confirmes o ajustes.</p>
-          </details>
-          <details>
-            <summary>¿Qué necesito entregar?</summary>
-            <p>Grabación semanal, objetivo (leads/turnos/ventas), links/CTA y, si aplica, brand kit.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="contacto">
-      <div class="container">
-        <div class="section__head">
-          <h2>Agendá 15 minutos</h2>
-          <p class="muted">Te decimos qué plan conviene y qué volumen es realista para tu caso.</p>
-        </div>
-
-        <div class="contact">
-          <div class="contact__card">
-            <h3>Dejá tus datos</h3>
-            <p class="muted">Formulario demo (sin backend). Genera un mail para probar el flujo.</p>
-
-            <form id="leadForm">
-              <div class="field">
-                <label for="name">Nombre</label>
-                <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+<div class="hero__actions">
+<a class="btn btn--primary" href="#contacto">Agendar llamada</a>
+<a class="btn btn--ghost" href="#demo">Ver reporte (ejemplo)</a>
+</div>
+<div class="hero__proof">
+<div class="proof">
+<div class="proof__kpi">4</div>
+<div class="proof__txt">Redes soportadas (TikTok/IG/Shorts/FB)</div>
+</div>
+<div class="proof">
+<div class="proof__kpi">24h</div>
+<div class="proof__txt">Ventana típica de revisión (opcional)</div>
+</div>
+<div class="proof">
+<div class="proof__kpi">Semanal</div>
+<div class="proof__txt">Reporte con acciones: duplicar / cortar / probar</div>
+</div>
+</div>
+</div>
+<div class="hero__card">
+<div class="card">
+<div class="card__top">
+<div class="card__title">Lo que entregamos</div>
+<div class="card__subtitle">por cuenta · por mes</div>
+</div>
+<ul class="checklist">
+<li>Calendario editorial + cadencia</li>
+<li>Edición “lite” + subtítulos (según plan)</li>
+<li>Variaciones reales (hooks/duración)</li>
+<li>QA antes de publicar + control de errores</li>
+<li>Tracking (UTM + WhatsApp/DM) y reporte semanal</li>
+</ul>
+<div class="card__cta">
+<a class="btn btn--primary btn--full" href="#planes">Ver planes y precios</a>
+<p class="muted">Crecimiento orgánico con método: volumen + consistencia + optimización semanal (sin humo).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="trust">
+<div class="container trust__inner">
+<p class="muted">Ideal para: consultores y coaches, abogados/estudios, médicos y clínicas, inmobiliarias, gimnasios y estética, concesionarios/autos, e‑commerce/locales, turismo/restaurantes, academias/educación, B2B SaaS y servicios.</p>
+</div>
+</section>
+<section class="section" id="como-funciona">
+<div class="container">
+<div class="section__head">
+<h2>Cómo funciona</h2>
+<p class="muted">Un sistema simple: de tu experiencia a presencia constante, sin caos.</p>
+</div>
+<div class="steps">
+<div class="step">
+<div class="step__num">01</div>
+<h3>Grabás</h3>
+<p>Una vez por semana respondés preguntas diseñadas para extraer tus ideas. Conversacional.</p>
+</div>
+<div class="step">
+<div class="step__num">02</div>
+<h3>Producimos</h3>
+<p>Convertimos la sesión en clips: subtítulos, formato nativo, hooks y packaging.</p>
+</div>
+<div class="step">
+<div class="step__num">03</div>
+<h3>Distribuimos</h3>
+<p>Publicación asistida (o programada donde aplique), con variaciones reales por red.</p>
+</div>
+<div class="step">
+<div class="step__num">04</div>
+<h3>Medimos y optimizamos</h3>
+<p>Reporte semanal con métricas y acciones: qué duplicar, qué cortar, qué probar.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--alt" id="incluye">
+<div class="container">
+<div class="section__head">
+<h2>Qué incluye</h2>
+<p class="muted">Operación nativa + QA + variación + medición. Sin “hacks”.</p>
+</div>
+<div class="grid-3">
+<div class="feature">
+<h3>Edición &amp; packaging</h3>
+<p>Subtítulos, ritmo, safe‑area, títulos/copy por red. Edición “lite” pensada para volumen.</p>
+</div>
+<div class="feature">
+<h3>QA pre‑post</h3>
+<p>Checklist de calidad: formato, CTA, links, errores comunes y banderas de riesgo.</p>
+</div>
+<div class="feature">
+<h3>Variaciones reales</h3>
+<p>Hooks y duraciones alternativas para test A/B. No clones. Aprendizaje más rápido.</p>
+</div>
+<div class="feature">
+<h3>Multi‑red</h3>
+<p>TikTok / IG Reels / YouTube Shorts / Facebook Reels. Un asset base, empaque por red.</p>
+</div>
+<div class="feature">
+<h3>Tracking de leads</h3>
+<p>UTM + WhatsApp/DM con mensaje prellenado para atribución simple desde el día 1.</p>
+</div>
+<div class="feature">
+<h3>Reporte accionable</h3>
+<p>Top/bottom de la semana + recomendaciones concretas para la semana siguiente.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="demo">
+<div class="container">
+<div class="section__head">
+<h2>Ejemplo de reporte semanal</h2>
+<p class="muted">Formato “1 página” para decidir qué publicar mañana.</p>
+</div>
+<div class="report">
+<div class="report__head">
+<div>
+<div class="report__title">Reporte semanal — Cuenta Demo — Semana 2026‑02‑16</div>
+<div class="muted">Resumen, top/bottom y plan próximo. (Números ilustrativos.)</div>
+</div>
+<a class="btn btn--ghost" href="#contacto">Quiero uno así</a>
+</div>
+<div class="report__grid">
+<div class="report__box">
+<h3>Resumen</h3>
+<ul class="mini">
+<li>Posts: <strong>12</strong></li>
+<li>Views totales: <strong>48.200</strong></li>
+<li>ER promedio: <strong>6,1%</strong></li>
+<li>Leads (WhatsApp/DM): <strong>18</strong></li>
+</ul>
+</div>
+<div class="report__box">
+<h3>Top 3</h3>
+<ol class="mini">
+<li><strong>Hook:</strong> “Si publicás 1 video/semana…” → duplicar</li>
+<li><strong>Tema:</strong> “Checklist QA pre‑post” → serie</li>
+<li><strong>Formato:</strong> “3 errores” (18–22s) → mantener</li>
+</ol>
+</div>
+<div class="report__box">
+<h3>Bottom 3</h3>
+<ol class="mini">
+<li>Intro lenta → recortar</li>
+<li>CTA genérico → CTA específico</li>
+<li>Versión 55s → versión 25s</li>
+</ol>
+</div>
+<div class="report__box">
+<h3>Plan próxima semana</h3>
+<ul class="mini">
+<li>Duplicar: “errores comunes” + “checklists”</li>
+<li>Test: 2 hooks alternativos por tema</li>
+<li>Cadencia: 4 posts/semana</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--alt" id="planes">
+<div class="container">
+<div class="section__head">
+<h2>Planes por cuenta</h2>
+<p class="muted">Competitivos y claros. Multi‑red como add‑on.</p>
+</div>
+<div class="pricing">
+<div class="price">
+<div class="price__tag">Launch</div>
+<div class="price__money"><span class="price__currency">USD</span>49<span class="price__period">/mes</span></div>
+<p class="muted">La opción más elegida en LatAm: operación + edición mínima + reporte.</p>
+<ul class="checklist"><li>Hasta 12 publicaciones/mes</li><li>1 red principal</li><li>4 piezas editadas/mes (lite)</li><li>Calendario + QA + tracking UTM básico</li></ul>
+<div class="price__foot">
+<div class="muted">Setup único: USD 25 (‑50% lanzamiento)</div>
+<a class="btn btn--primary btn--full" data-plan="Launch" href="#contacto">Empezar Launch</a>
+</div>
+</div>
+<div class="price">
+<div class="price__tag">Starter</div>
+<div class="price__money"><span class="price__currency">USD</span>79<span class="price__period">/mes</span></div>
+<p class="muted">Más edición y consistencia. Ideal para empezar a escalar.</p>
+<ul class="checklist"><li>Hasta 16 publicaciones/mes</li><li>1 red principal</li><li>8 piezas editadas/mes (lite)</li><li>Copy/títulos + 1 ronda de ajustes/semana</li></ul>
+<div class="price__foot">
+<div class="muted">Setup único: USD 30 (‑50% lanzamiento)</div>
+<a class="btn btn--primary btn--full" data-plan="Starter" href="#contacto">Empezar Starter</a>
+</div>
+</div>
+<div class="price price--featured">
+<div class="price__badge">Recomendado</div>
+<div class="price__tag">Growth</div>
+<div class="price__money"><span class="price__currency">USD</span>119<span class="price__period">/mes</span></div>
+<p class="muted">Optimización semanal con pruebas simples (hooks/duración).</p>
+<ul class="checklist"><li>Hasta 24 publicaciones/mes</li><li>1 red principal</li><li>12 piezas editadas/mes (lite)</li><li>2 tests/mes (A/B de hook o duración)</li></ul>
+<div class="price__foot">
+<div class="muted">Setup único: USD 40 (‑50% lanzamiento)</div>
+<a class="btn btn--primary btn--full" data-plan="Growth" href="#contacto">Empezar Growth</a>
+</div>
+</div>
+<div class="price">
+<div class="price__tag">Scale</div>
+<div class="price__money"><span class="price__currency">USD</span>179<span class="price__period">/mes</span></div>
+<p class="muted">Más output y roadmap mensual. Para equipos o metas agresivas.</p>
+<ul class="checklist"><li>Hasta 40 publicaciones/mes</li><li>1 red principal</li><li>20 piezas editadas/mes (lite)</li><li>4 tests/mes + 1 call mensual</li></ul>
+<div class="price__foot">
+<div class="muted">Setup único: USD 50 (‑50% lanzamiento)</div>
+<a class="btn btn--primary btn--full" data-plan="Scale" href="#contacto">Empezar Scale</a>
+</div>
+</div>
+</div>
+<div class="addons">
+<h3>Add‑ons</h3>
+<div class="addons__grid"><div class="addon"><div class="addon__name">Red adicional (repurpose)</div><div class="addon__price">USD 12 / red / mes</div><p class="muted">Adaptamos formato + copy para otra red (TikTok→IG/Shorts/FB). Sin publicación.</p></div><div class="addon"><div class="addon__name">Red adicional (repurpose + publicación)</div><div class="addon__price">USD 22 / red / mes</div><p class="muted">Incluye publicación, QA y tracking por red adicional (1 cuenta por red).</p></div><div class="addon"><div class="addon__name">Pack Variantes</div><div class="addon__price">USD 15 / mes</div><p class="muted">2 variantes extra por semana (hook/duración) para testear y aprender más rápido.</p></div><div class="addon"><div class="addon__name">Piezas extra (edición lite)</div><div class="addon__price">USD 4 / pieza</div><p class="muted">Edición adicional con subtítulos y cortes básicos (sin motion complejo).</p></div><div class="addon"><div class="addon__name">Tracking Pro + reporte</div><div class="addon__price">USD 12 / mes</div><p class="muted">UTM por campaña + tablero simple (Sheets/Looker Studio) y acciones semanales.</p></div></div>
+</div>
+</div>
+</section>
+<section class="section" id="faq">
+<div class="container">
+<div class="section__head">
+<h2>Preguntas frecuentes</h2>
+<p class="muted">Proceso y métricas, no promesas mágicas.</p>
+</div>
+<div class="faq"><details><summary>¿Garantizan alcance o viralidad?</summary><p>No. Prometemos proceso: volumen, calidad y optimización por métricas. El alcance depende del mercado, la oferta y la ejecución.</p></details><details><summary>¿Qué entrego yo cada semana?</summary><p>Una grabación de 40–60 min (o material existente). También tu CTA (WhatsApp/agenda) y, si tenés, brand kit/logo.</p></details><details><summary>¿Cómo funciona multi‑red?</summary><p>Partimos de un “master” y lo adaptamos por red (formato, copy, duración). Si contratás publicación, operamos una cuenta por red y medimos por separado.</p></details><details><summary>¿Puedo aprobar antes de publicar?</summary><p>Sí. Definimos una ventana de revisión (ej. 24h). Si no respondés, publicamos según el calendario acordado.</p></details><details><summary>¿Qué pasa con mi cuenta y accesos?</summary><p>Vos sos dueño de las cuentas. Usamos accesos seguros (roles/2FA) y registramos cambios. Podés revocar accesos cuando quieras.</p></details><details><summary>¿Para qué nichos funciona mejor?</summary><p>Servicios con ROI medible: inmobiliaria, salud/estética, fitness, autos, educación, B2B consultivo, e‑commerce local. Si tu CTA es claro, funciona mejor.</p></details><details><summary>¿Qué métricas reportan?</summary><p>Visualizaciones, retención, interacción, clics/DM/WhatsApp (con UTM cuando aplica) y recomendaciones concretas: duplicar, cortar o probar.</p></details></div>
+</div>
+</section>
+<section class="section section--alt" id="contacto">
+<div class="container">
+<div class="section__head">
+<h2>Agendá 15 minutos</h2>
+<p class="muted">Te decimos qué plan conviene y qué volumen es realista para tu caso.</p>
+</div>
+<div class="contact">
+<div class="contact__card">
+<h3>Dejá tus datos</h3>
+<p class="muted">Dejanos tus datos y te respondemos dentro de 24h hábiles.</p>
+<form data-netlify="true" id="leadForm" method="POST" name="linkreel-leads" netlify-honeypot="bot-field"><input name="form-name" type="hidden" value="linkreel-leads"/><p style="display:none"><label>No completar: <input name="bot-field"/></label></p>
+<div class="field">
+<label for="name">Nombre</label>
+<input id="name" name="name" placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div class="field">
+<label for="email">Email</label>
+<input id="email" name="email" placeholder="tu@correo.com" required="" type="email"/>
+</div>
+<div class="field">
+<label for="vertical">Vertical</label>
+<select id="vertical" name="vertical" required=""><option disabled="" selected="" value="">Elegí una opción</option><option>Marca personal (B2B)</option><option>Agencia / Community Manager</option><option>Inmobiliaria</option><option>Clínica / Profesional de salud</option><option>Gimnasio / Fitness</option><option>Estética / Belleza</option><option>Concesionario / Autos</option><option>E‑commerce / Local</option><option>Educación / Academia</option><option>Restaurante / Turismo</option><option>Otro</option></select>
+</div>
+<div class="field">
+<label for="plan">Plan</label>
+<select id="plan" name="plan" required="">
+<option disabled="" selected="" value="">Elegí un plan</option>
+<option>Launch</option>
+<option>Starter</option>
+<option>Growth</option>
+<option>Scale</option>
+</select>
+</div>
+<div class="field">
+<label for="msg">Mensaje</label>
+<textarea id="msg" name="msg" placeholder="Qué vendés y qué objetivo tenés (leads/turnos/ventas)" rows="4"></textarea>
+</div>
+<button class="btn btn--primary btn--full" type="submit">Enviar</button><div aria-live="polite" class="form-status" id="formStatus" role="status"></div>
+<p class="muted tiny">Captura segura (Netlify Forms). Sin backend propio.</p>
+</form>
+</div>
+<div class="contact__side">
+<div class="sidebox">
+<h3>WhatsApp / Calendly</h3>
+<p class="muted">Reemplazá estos links por los reales.</p>
+<div class="sidebox__btns">
+<a class="btn btn--ghost btn--full" href="https://wa.me/5490000000000?text=Hola%20vengo%20de%20LinkReel%20y%20quiero%20info%20sobre%20planes" rel="noopener" target="_blank">WhatsApp (demo)</a>
+<a class="btn btn--ghost btn--full" href="https://calendly.com/" rel="noopener" target="_blank">Calendly (demo)</a>
+</div>
+<div class="sidebox__note">
+<strong>Tip:</strong> usá mensajes prellenados distintos por red para atribución.
               </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="tu@correo.com" required />
-              </div>
-              <div class="field">
-                <label for="vertical">Vertical</label>
-                <select id="vertical" name="vertical" required>
-                  <option value="" selected disabled>Elegí una opción</option>
-                  <option>Marca personal (B2B)</option>
-                  <option>Inmobiliaria</option>
-                  <option>Gimnasio / Fitness</option>
-                  <option>Estética / Salud</option>
-                  <option>Autos</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="plan">Plan</label>
-                <select id="plan" name="plan" required>
-                  <option value="" selected disabled>Elegí un plan</option>
-                  <option>Launch</option>
-                  <option>Starter</option>
-                  <option>Growth</option>
-                  <option>Scale</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="msg">Mensaje</label>
-                <textarea id="msg" name="msg" rows="4" placeholder="Qué vendés y qué objetivo tenés (leads/turnos/ventas)"></textarea>
-              </div>
-
-              <button class="btn btn--primary btn--full" type="submit">Enviar</button>
-              <p class="muted tiny">Al enviar, se genera un “mailto:” (sin backend).</p>
-            </form>
-          </div>
-
-          <div class="contact__side">
-            <div class="sidebox">
-              <h3>WhatsApp / Calendly</h3>
-              <p class="muted">Reemplazá estos links por los reales.</p>
-              <div class="sidebox__btns">
-                <a class="btn btn--ghost btn--full" href="https://wa.me/5490000000000?text=Hola%20vengo%20de%20LinkReel%20y%20quiero%20info%20sobre%20planes" target="_blank" rel="noopener">WhatsApp (demo)</a>
-                <a class="btn btn--ghost btn--full" href="https://calendly.com/" target="_blank" rel="noopener">Calendly (demo)</a>
-              </div>
-              <div class="sidebox__note">
-                <strong>Tip:</strong> usá mensajes prellenados distintos por red para atribución.
-              </div>
-            </div>
-
-            <div class="sidebox">
-              <h3>Nota</h3>
-              <p class="muted">No prometemos resultados. Operamos proceso, calidad y optimización con métricas.</p>
-              <p class="muted tiny">© <span id="year"></span> LinkReel.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="brand__mark" aria-hidden="true">LR</span>
-        <div>
-          <div class="footer__name">LinkReel</div>
-          <div class="muted tiny">Presencia multi‑red en sistema.</div>
-        </div>
-      </div>
-      <div class="footer__links">
-        <a href="#planes">Planes</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+</div>
+<div class="sidebox">
+<h3>Nota</h3>
+<p class="muted">No prometemos resultados. Operamos proceso, calidad y optimización con métricas.</p>
+<p class="muted tiny">© <span id="year"></span> LinkReel.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer__inner">
+<div class="footer__brand">
+<span aria-hidden="true" class="brand__mark">LR</span>
+<div>
+<div class="footer__name">LinkReel</div>
+<div class="muted tiny">Presencia multi‑red en sistema.</div>
+</div>
+</div>
+<div class="footer__links">
+<a href="#planes">Planes</a>
+<a href="#faq">FAQ</a>
+<a href="#contacto">Contacto</a>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
